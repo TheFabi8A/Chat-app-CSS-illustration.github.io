@@ -7,7 +7,7 @@
 body {
     font-size: 16px;
     display: flex;
-    flex-flow: column nowrap;
+    flex-direction: column;
     align-items: center;
     gap: 50px;
     background: url("images/pattern-mobile.svg") -190px 0 / 380px no-repeat;
@@ -76,25 +76,20 @@ body {
 .container-description {
     text-align: center;
     width: 300px;
-    margin-bottom: 25px;
 }
 
 .title {
     font-family: var(--font-700);
     color: var(--desaturated-dark-violet);
-    margin-bottom: 10px;
 }
 
 .paragraph {
     font-family: var(--font-400);
 }
 
-/* CHAT */
-
 .container-mobile {
-    scale: 0.725;
+    scale: 0.8;
     overflow: hidden;
-    margin-top: 25px;
     width: var(--width);
     position: relative;
     flex-flow: column nowrap;
@@ -169,15 +164,6 @@ body {
     max-height: 500px;
 }
 
-.chat-container::-webkit-scrollbar {
-    width: 7px;
-}
-
-.chat-container::-webkit-scrollbar-thumb {
-    background: linear-gradient(to bottom, var(--light-magenta), var(--light-violet));
-    border-radius: 7px;
-}
-
 .container-message-friend {
     margin-left: 10px;
     color: var(--moderate-violet);
@@ -246,14 +232,6 @@ body {
     color: var(--light-grayish-violet);
 }
 
-[class$="me"] > .detail {
-    order: 5;
-}
-
-[class$="me"] > .detail > p {
-    order: -5;
-}
-
 .circle {
     width: 15px;
     height: 15px;
@@ -292,11 +270,6 @@ body {
     color: var(--desaturated-dark-violet);
 }
 
-.input-text::placeholder {
-    color: var(--desaturated-dark-violet);
-    font-family: var(--font-500);
-}
-
 .button-send {
     position: relative;
     width: 40px;
@@ -309,14 +282,36 @@ body {
     align-items: center;
 }
 
-.button-send:active {
-    outline: 5px solid var(--moderate-violet);
-}
-
 .arrow-send {
     width: 30px;
     height: 30px;
     transform: rotateY(180deg);
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 7px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--light-magenta), var(--light-violet));
+    border-radius: 7px;
+}
+
+.input-text::placeholder {
+    color: var(--desaturated-dark-violet);
+    font-family: var(--font-500);
+}
+
+.button-send:active {
+    outline: 5px solid var(--moderate-violet);
+}
+
+[class$="me"] > .detail {
+    order: 5;
+}
+
+[class$="me"] > .detail > p {
+    order: -5;
 }
 
 @media screen and (min-width: 1366px) {
@@ -329,11 +324,5 @@ body {
 
     .container-description {
         text-align: left;
-    }
-}
-
-@media screen and (min-width: 1920px) {
-    .container-mobile {
-        scale: 1;
     }
 }
