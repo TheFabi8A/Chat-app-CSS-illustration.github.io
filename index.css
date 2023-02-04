@@ -10,6 +10,7 @@ body {
     flex-flow: column nowrap;
     align-items: center;
     gap: 50px;
+    background: url("images/pattern-mobile.svg") -190px 0 / 380px no-repeat;
 }
 
 :root {
@@ -21,8 +22,8 @@ body {
     --dark-grayish-violet: hsl(270deg 7% 64%);
 
     /* gradients */
-    --light-magenta: hsl(293deg 100% 63%);
-    --light-violet: hsl(264deg 100% 61%);
+    --light-magenta: #e942ff;
+    --light-violet: #8838ff;
 
     /* secondary */
     --transparent: hsl(0% 0% 100%);
@@ -91,30 +92,20 @@ body {
 /* CHAT */
 
 .container-mobile {
+    scale: 0.725;
     overflow: hidden;
     margin-top: 25px;
     width: var(--width);
     position: relative;
-    display: flex;
     flex-flow: column nowrap;
     border: var(--border) solid var(--light-grayish-violet);
     border-radius: calc(var(--radius) + var(--border));
-    z-index: 5;
-    box-shadow: px px 50px var(--desaturated-dark-violet);
+    box-shadow: 15px 15px 50px var(--desaturated-dark-violet);
 }
 
 .top-fix {
     position: relative;
     background-color: var(--dark-grayish-violet);
-}
-
-.camera-mobile {
-    border-radius: 0 0 20px 20px;
-    width: 200px;
-    height: 25px;
-    background-color: var(--light-grayish-violet);
-    position: absolute;
-    left: calc(calc(var(--width) - 200px) / 2);
 }
 
 .block-top {
@@ -176,6 +167,15 @@ body {
     gap: 15px;
     overflow-y: auto;
     max-height: 500px;
+}
+
+.chat-container::-webkit-scrollbar {
+    width: 7px;
+}
+
+.chat-container::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, var(--light-magenta), var(--light-violet));
+    border-radius: 7px;
 }
 
 .container-message-friend {
@@ -277,7 +277,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: var(--width);
+    width: 100%;
     height: 80px;
     background-color: var(--light-grayish-violet);
     border: var(--border) solid var(--dark-grayish-violet);
@@ -298,13 +298,11 @@ body {
 }
 
 .button-send {
-    padding: 0;
-    box-sizing: border-box;
     position: relative;
     width: 40px;
     height: 40px;
     border: none;
-    border-radius: calc(var(--radius) + var(--border));
+    border-radius: 50%;
     background-color: var(--desaturated-dark-violet);
     display: flex;
     justify-content: center;
@@ -316,18 +314,20 @@ body {
 }
 
 .arrow-send {
-    position: relative;
-    left: 1px;
-    width: 35px;
-    height: 35px;
+    width: 30px;
+    height: 30px;
     transform: rotateY(180deg);
 }
 
 @media screen and (min-width: 1366px) {
     body {
+        background: url("images/pattern-desktop.svg") -50px 0 / 510px no-repeat;
         justify-content: center;
-        flex-flow: row nowrap;
-        height: 100vh;
-        width: 100vw;
+        flex-direction: row;
+        min-height: 100vh;
+    }
+
+    .container-description {
+        text-align: left;
     }
 }
