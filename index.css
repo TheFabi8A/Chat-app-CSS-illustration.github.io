@@ -331,3 +331,9 @@ body {
         text-align: left;
     }
 }
+
+@media screen and (min-width: 1920px) {
+    .container-mobile {
+        scale: 1;
+    }
+}
