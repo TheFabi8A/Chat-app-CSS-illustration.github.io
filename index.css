@@ -5,6 +5,7 @@
 }
 
 body {
+    margin-bottom: 50px;
     font-size: 16px;
     display: flex;
     flex-direction: column;
@@ -74,8 +75,12 @@ body {
 }
 
 .container-description {
+    padding: 0 15px;
     text-align: center;
-    width: 300px;
+    max-width: 450px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 .title {
@@ -85,6 +90,7 @@ body {
 
 .paragraph {
     font-family: var(--font-400);
+    color: var(--dark-grayish-violet);
 }
 
 .container-mobile {
@@ -320,9 +326,11 @@ body {
         justify-content: center;
         flex-direction: row;
         min-height: 100vh;
+        margin: 0;
     }
 
     .container-description {
         text-align: left;
+        padding: 0;
     }
 }
