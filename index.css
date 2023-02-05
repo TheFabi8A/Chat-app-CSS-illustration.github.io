@@ -111,7 +111,7 @@ body {
 }
 
 .block-top {
-    padding-top: 25px;
+    padding: 2em 10px 10px;
     display: flex;
     flex-flow: row nowrap;
     border-radius: 0 0 0.313em 0.313em;
@@ -137,7 +137,8 @@ body {
     flex-flow: row nowrap;
     align-items: center;
     gap: 0.313em;
-    margin: 1.25em 15px;
+
+    /* margin: 1.25em 15px; */
 }
 
 .dots {
