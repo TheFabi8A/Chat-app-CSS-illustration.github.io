@@ -198,7 +198,7 @@ body {
 .user-status {
     font-family: var(--font-400);
     font-weight: 400;
-    opacity: 0.7;
+    opacity: 0.8;
 }
 
 .chat-container {
@@ -252,16 +252,6 @@ body {
     width: 3.125em;
     height: 3.125em;
     border-radius: calc(var(--radius) - 1.875em);
-}
-
-.detail {
-    font-family: var(--font-400);
-    font-weight: 400;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 10px;
-    font-size: 1.5rem;
 }
 
 [class^="container-tip"] {
@@ -320,11 +310,11 @@ body {
 }
 
 .button-send {
-    width: 2.5em;
-    height: 2.5em;
+    width: 3em;
+    height: 3em;
     border: none;
     border-radius: 50%;
-    background: var(--desaturated-dark-violet) url("images/arrow-send.svg") 30% 50% / 1.875em no-repeat;
+    background: var(--desaturated-dark-violet) url("images/arrow-send.svg") 40% 50% / 1.875em no-repeat;
     rotate: 180deg;
     display: flex;
     justify-content: center;
@@ -348,11 +338,18 @@ body {
 }
 
 .button-send:active {
-    outline: 0.313em solid var(--moderate-violet);
+    outline: 0.275em solid var(--moderate-violet);
 }
 
-.detail p {
-    font-size: 0.9rem;
+.detail {
+    font-family: var(--font-400);
+    font-weight: 400;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+    font-size: initial;
+    font-size: 1em;
 }
 
 [class$="me"] .detail {
