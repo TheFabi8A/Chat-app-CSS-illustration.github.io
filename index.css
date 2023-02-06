@@ -356,7 +356,7 @@ body {
     order: 5;
 }
 
-[class$="me"] .detail p {
+[class$="me"] .detail span {
     order: -5;
 }
 
