@@ -123,18 +123,6 @@ body {
     justify-content: space-between;
 }
 
-.block-top::after {
-    content: "";
-    position: absolute;
-    width: 60%;
-    height: 2.188em;
-    background-color: var(--light-grayish-violet);
-    border-bottom-left-radius: 0.938em;
-    border-bottom-right-radius: 0.938em;
-    top: -0.313em;
-    left: 20%;
-}
-
 .left-section {
     display: flex;
     flex-flow: row nowrap;
@@ -159,22 +147,6 @@ body {
     width: 1.75rem;
     height: 2.25rem;
     background: transparent url("images/arrow-back.svg") center / 35% no-repeat;
-}
-
-.dots:hover,
-.arrow-back:hover,
-.button-send {
-    cursor: pointer;
-}
-
-.arrow-back:active {
-    box-shadow: none;
-    transform: translate(2px, 2px);
-}
-
-.dots:active {
-    box-shadow: none;
-    transform: translate(-2px, 2px);
 }
 
 .avatar-user {
@@ -321,6 +293,23 @@ body {
     align-items: center;
 }
 
+.detail {
+    font-family: var(--font-400);
+    font-weight: 400;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+    gap: 10px;
+    font-size: initial;
+    font-size: 1em;
+}
+
+.dots,
+.arrow-back,
+.button-send {
+    cursor: pointer;
+}
+
 .chat-container::-webkit-scrollbar {
     width: 0.438em;
 }
@@ -337,19 +326,30 @@ body {
     font-weight: 500;
 }
 
-.button-send:active {
-    outline: 0.275em solid var(--moderate-violet);
+.block-top::after {
+    content: "";
+    position: absolute;
+    width: 60%;
+    height: 2.188em;
+    background-color: var(--light-grayish-violet);
+    border-bottom-left-radius: 0.938em;
+    border-bottom-right-radius: 0.938em;
+    top: -0.313em;
+    left: 20%;
 }
 
-.detail {
-    font-family: var(--font-400);
-    font-weight: 400;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    gap: 10px;
-    font-size: initial;
-    font-size: 1em;
+.arrow-back:active {
+    box-shadow: none;
+    transform: translate(2px, 2px);
+}
+
+.dots:active {
+    box-shadow: none;
+    transform: translate(-2px, 2px);
+}
+
+.button-send:active {
+    outline: 0.275em solid var(--moderate-violet);
 }
 
 [class$="me"] .detail {
